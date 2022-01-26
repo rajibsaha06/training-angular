@@ -1,1 +1,7 @@
 <p>contact-page works!</p>
+<p-dropdown
+  [options]="cities"
+  [(ngModel)]="selectedCity"
+  optionLabel="name"
+  (onChange)="onChangeDropdown()"
+></p-dropdown>
