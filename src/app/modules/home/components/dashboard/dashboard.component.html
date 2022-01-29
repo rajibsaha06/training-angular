@@ -1,3 +1,9 @@
+<app-slider
+  (clickEvent)="getDataFromChild($event)"
+  (shareName)="getSampleDataFromChild($event)"
+></app-slider>
+<app-inbox [inbox]="inboxData"></app-inbox>
+<br /><br />
 <div class="row">
   <div class="col-lg-12" *ngIf="show">dashboard works!</div>
   <ng-container *ngIf="show; else elsePart"
