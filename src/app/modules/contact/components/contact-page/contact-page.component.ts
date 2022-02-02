@@ -1,4 +1,5 @@
 import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { HomeService } from 'src/app/modules/home/services/home.service';
 import { Cities } from '../../models/contact.interface';
 
 @Component({
@@ -17,9 +18,10 @@ export class ContactPageComponent implements OnInit {
   selectedCity: Cities;
   abc: boolean = true;
 
-  constructor() {}
+  constructor(private homeService: HomeService) {}
 
   ngOnInit(): void {
+    console.log(this.homeService.shareAdvice);
     this.selectedCity = { name: 'London', code: 'LDN' };
   }
 

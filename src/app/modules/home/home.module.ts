@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { InboxComponent } from './components/inbox/inbox.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { TableModule } from 'primeng/table';
+// import { HomeService } from './services/home.service';
 
 @NgModule({
   declarations: [DashboardComponent, InboxComponent, SliderComponent],
@@ -18,5 +19,6 @@ import { TableModule } from 'primeng/table';
       },
     ]),
   ],
+  // providers: [HomeService],
 })
 export class HomeModule {}

@@ -1,2 +1,14 @@
 <p>slider works!</p>
 <button (click)="shareData()">Click</button>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Advice</th>
+  </tr>
+  <tr>
+    <!-- <tr *ngFor="let ad of advices"> -->
+    <td>{{ advices?.slip?.id }}</td>
+    <td>{{ advices?.slip?.advice }}</td>
+  </tr>
+</table>
