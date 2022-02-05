@@ -1,8 +1,10 @@
+<input type="text" #inputText />
+<div #hello>Hellooooo</div>
 <app-slider
   (clickEvent)="getDataFromChild($event)"
   (shareName)="getSampleDataFromChild($event)"
 ></app-slider>
-<app-inbox [inbox]="inboxData"></app-inbox>
+<app-inbox [inbox]="inboxData" #inboxName></app-inbox>
 <br /><br />
 <div class="row">
   <div class="col-lg-12" *ngIf="show">dashboard works!</div>
