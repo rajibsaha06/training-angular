@@ -17,6 +17,11 @@ export class ContactPageComponent implements OnInit {
   ];
   selectedCity: Cities;
   abc: boolean = true;
+  name: string = 'Natia';
+  dateValue: string = '02/14/2022';
+  currencyValue: string = '200.34';
+  paragraph: string =
+    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s';
 
   constructor(private homeService: HomeService) {}
 
