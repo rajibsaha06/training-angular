@@ -1,0 +1,53 @@
+<div class="col-lg-12">
+  <form
+    method="post"
+    (ngSubmit)="contactForm.form.valid && onSubmit(contactForm)"
+    #contactForm="ngForm"
+  >
+    <div class="col-lg-4">
+      <input
+        type="text"
+        class="form-control"
+        [ngClass]="{
+          'is-invalid': contactForm.submitted && title.invalid
+        }"
+        placeholder="Enter Name"
+        name="title"
+        #title="ngModel"
+        [(ngModel)]="contacts.title"
+        required
+      />
+      <span
+        *ngIf="contactForm.submitted && title.invalid"
+        class="error-feedback"
+      >
+        <span *ngIf="title.errors.required">Field is required</span>
+      </span>
+    </div>
+    <br />
+    <div class="col-lg-4">
+      <input
+        type="number"
+        class="form-control"
+        [ngClass]="{
+          'is-invalid': contactForm.submitted && phone.invalid
+        }"
+        placeholder="Enter Name"
+        name="phone"
+        #phone="ngModel"
+        [(ngModel)]="contacts.phone"
+        required
+      />
+      <span
+        *ngIf="contactForm.submitted && phone.invalid"
+        class="error-feedback"
+      >
+        <span *ngIf="phone.errors.required">Field is required</span>
+      </span>
+    </div>
+    <br />
+    <div class="col-lg-4">
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+</div>
