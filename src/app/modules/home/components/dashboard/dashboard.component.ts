@@ -76,6 +76,6 @@ export class DashboardComponent implements OnInit, AfterViewInit {
   }
 
   getSampleDataFromChild(event: string) {
-    console.log(event);
+    //console.log(event);
   }
 }

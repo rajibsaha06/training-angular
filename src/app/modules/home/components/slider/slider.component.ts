@@ -26,10 +26,26 @@ export class SliderComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.shareName.emit(this.name);
     this.getAdvice();
+    this.subscription.add(
+      this.homeService.dummySubject$.subscribe((res) => {
+        if (res) {
+          console.log(res);
+        }
+      })
+    );
+    this.subscription.add(
+      this.homeService.dummyBehaviourSubject$.subscribe((res) => {
+        if (res) {
+          console.log('be2--' + res);
+        }
+      })
+    );
   }
 
   shareData() {
     this.clickEvent.emit(true);
+    this.homeService.dummySubject.next(this.name);
+    this.homeService.dummyBehaviourSubject.next('behaviour-' + this.name);
   }
 
   getAdvice() {
