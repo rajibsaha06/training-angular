@@ -1,0 +1,18 @@
+<p>slider two works!</p>
+<button (click)="shareData()">Click</button>
+
+<!-- <table>
+  <tr>
+    <th>ID</th>
+    <th>Advice</th>
+  </tr>
+  <tr *ngIf="advices$ | async as advice">
+    <td>{{ advice?.id }}</td>
+    <td>{{ advice?.advice }}</td>
+  </tr>
+</table> -->
+{{ loader }}
+<app-slider-three
+  [advice]="advices$ | async"
+  [advicesss]="advicesss$ | async"
+></app-slider-three>
